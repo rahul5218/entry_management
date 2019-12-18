@@ -9,11 +9,14 @@
     <div class="jumbotron row">
       <div class="col-sm-6">
         <h1> Entry management System</h1>
-        <h3>Guest Entry</h3>
+        <hr>
+        <h6>Click below for Host entry </h6>
+        <a class="btn btn-secondary" href="/host">Host</a>
         <h4><%=message%></h4>
       </div>
         <div class="col-sm-6">
     <form action="/guest" method="post">
+      <h3>Guest Entry</h3>
   <div class="form-group">
     <label for="Email">Email address</label>
     <input type="email" class="form-control" placeholder="Enter email" name="email">
@@ -27,7 +30,7 @@
     <input type="text" class="form-control" placeholder="Enter phn no" name="mobile">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-  <a class="btn btn-primary" href="/host">Host</a>
+
 </form>
 </div>
 </div>

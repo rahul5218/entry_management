@@ -7,10 +7,26 @@
   </head>
   <body>
     <div class="jumbotron">
-
-      <h1>Checked In</h1>
-      <h3><%=name%></h3>
-      <a href="/checkout" type="button" class="btn btn-primary btn-lg"name="chekout">chekout</a>
+        <div class="row">
+          <div class="col-3">
+            <h1 style="display:inline">Checked In</h1>
+            <hr>
+            <h6>Name: <%=currentguest.name%></h3>
+            <h6>Email: <%=currentguest.email%></h3>
+            <h6>Mobile: <%=currentguest.mobile%></h3>
+            <h6>Checkin Time: <%=currentguest.checkin%></h3>
+          </div>
+          <div class="col-4">
+            <a href=<%="/checkout/"+currentguest.email%> type="button" class="btn btn-danger btn-lg">chekout</a>
+          </div>
+        <div class="col-4">
+          <h4>All Guests in meeting</h4>
+          <hr>
+          <%for(i=0;i<guests.length;i++){%>
+          <h6><%=guests[i].name%> <span class="badge badge-pill badge-success">checkin</span></h6>
+          <%}%>
+        </div>
+        </div>
     </div>
   </body>
 </html>
